@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab1</title>
+    <!-- Bootstrap cdn links -->
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.1-dist/css/bootstrap.min.css"
+    />
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- css files -->
+    <link rel="stylesheet" href="styles/NewConnectionStyles.css" />
+    <!-- js files -->
+  </head>
+  <body>
+    <!-- header section -->
+    <!-- main section -->
+    <main class="new-connection-container">
+      <h1>Create a new connection</h1>
+      <form class="new-connection-form">
+        <div class="mb-3 form-group">
+          <label for="topic" class="form-label">Topic</label>
+          <input
+            type="text"
+            class="form-control"
+            id="topic"
+            placeholder="Enter the topic of your connection"
+          />
+        </div>
+        <div class="mb-3 form-group">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="Enter the title of your connection"
+          />
+        </div>
+        <div class="mb-3 form-group">
+            <label for="host" class="form-label">Host</label>
+            <input
+              type="text"
+              class="form-control"
+              id="host"
+              placeholder="Enter the host of your connection"
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="details" class="form-label">Details</label>
+            <input
+              type="text"
+              class="form-control"
+              id="details"
+              placeholder="Enter the details of your connection"
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="location" class="form-label">Where</label>
+            <input
+              type="text"
+              class="form-control"
+              id="location"
+              placeholder="Enter the location of your connection"
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="date" class="form-label">When</label>
+            <input
+              type="date"
+              class="form-control"
+              id="date"
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="start-time" class="form-label">Start</label>
+            <input
+              type="time"
+              class="form-control"
+              id="start-time"
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="end-time" class="form-label">End</label>
+            <input
+              type="time"
+              class="form-control"
+              id="end-time"
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="file" class="form-label">File</label>
+            <input
+              type="file"
+              class="form-control"
+              id="file"
+            />
+          </div>
+
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Create connection</button>
+          </div>
+       
+      </form>
+    </main>
+    <!-- footer section -->
+  </body>
+</html>
