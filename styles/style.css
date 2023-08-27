@@ -22,11 +22,11 @@ a{
 text-decoration:none;
 
 }
-#but2,#text1,#text2,#text3,#text4,#text5,#text6{
+#but2,#text1,#text2,#text4,#text5,#text6{
 color:rgb(46, 201, 46);
 }
-.nav-links-container{
-    flex-grow: initial;
+#text3{
+	color:white;
 }
 
 footer{
