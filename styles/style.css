@@ -18,6 +18,9 @@ color:white;
     justify-content: space-between;
     padding: 16px 32px;
 }
+.nav-links-container{
+    flex-grow: initial;
+}
 a{
 text-decoration:none;
 
