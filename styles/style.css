@@ -1,20 +1,43 @@
-body{
-    box-sizing: border-box;
+@charset "UTF-8";
+#logo{
+    width: 430px;
+    height: 100px;
+}
+#but1{
+background-color: rgb(54, 202, 54);
+padding-top: 6px;
+padding-bottom: 6px;
+border-radius: 10%;
+color:white;
+}
+a{
+text-decoration:none;
+
+}
+#but2,#text1,#text2,#text3,#text4,#text5,#text6{
+color:rgb(46, 201, 46);
 }
 
-.new-connection-container{
-    margin: 32px;
+footer{
+
+
+color: white;
+padding: 5px 20px;
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 2.5rem;
 }
-.new-connection-form{
-    margin-top: 48px;
+#second{
+margin-top:5px;
 }
-.form-control{
-    display:inline-block;
-    width: 80%;
+#text2{
+color:white;
 }
-.form-group{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#second-nav{
+display:inline-block;
+width:100%;
+padding: 30px 20px 20px;
+position: absolute;
+
 }
