@@ -1,4 +1,7 @@
 @charset "UTF-8";
+body{
+    box-sizing: border-box;
+}
 #logo{
     width: 430px;
     height: 100px;
@@ -10,12 +13,20 @@ padding-bottom: 6px;
 border-radius: 10%;
 color:white;
 }
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+}
 a{
 text-decoration:none;
 
 }
 #but2,#text1,#text2,#text3,#text4,#text5,#text6{
 color:rgb(46, 201, 46);
+}
+.nav-links-container{
+    flex-grow: initial;
 }
 
 footer{
@@ -38,6 +49,4 @@ color:white;
 display:inline-block;
 width:100%;
 padding: 30px 20px 20px;
-position: absolute;
-
 }
