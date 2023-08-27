@@ -12,11 +12,57 @@
     />
     <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
     <!-- css files -->
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/NewConnectionStyles.css" />
     <!-- js files -->
   </head>
   <body>
     <!-- header section -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-container">
+        <nav class="top-navbar">
+          <a href="./index.html"><img id="logo" alt="logo" src="assets/images/logo.png" /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+        <div class="collapse navbar-collapse nav-links-container" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="./NewConnection.html" id="text1">Start a new Connection &nbsp;</a>
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+                id="but2"
+              >
+                Login &nbsp;
+              </button>
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+                id="but1"
+              >
+                Sign Up &nbsp;
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-md navbar-dark bg-success" id="second-nav">
+        <ul class="navbar-nav mr-auto">
+          <li><a href="#" id="text2">Home &nbsp;</a></li>
+          <li><a href="#" id="text3">Connections</a></li>
+        </ul>
+      </nav>
+    </header>
     <!-- main section -->
     <main class="new-connection-container">
       <h1>Create a new connection</h1>
@@ -106,5 +152,12 @@
       </form>
     </main>
     <!-- footer section -->
+    <footer class="navbar navbar-expand-md navbar-dark bg-dark">
+      <ul class="navbar-nav mr-auto">
+        <li id="text6">&copy; UNCC Cybercorps SFS &nbsp;</li>
+        <li><a href="#" id="text4">ABOUT &nbsp;</a></li>
+        <li><a href="#" id="text5">CONTACT &nbsp;</a></li>
+      </ul>
+    </footer>
   </body>
 </html>
