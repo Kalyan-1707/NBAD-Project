@@ -3,7 +3,10 @@ body{
 }
 
 .new-connection-container{
+    border-radius: 8px;
     margin: 32px;
+    padding: 32px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .new-connection-form{
     margin-top: 48px;
@@ -17,4 +20,21 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.footer-container{
+    position: static;
+}
+.container-fluid{
+    width: 80%;
+    margin-top:64px;
+    margin-bottom: 64px;
+}
+.submit-btn-container{
+    margin-top: 24px;
+    display: flex !important;
+    justify-content: flex-end;
+
+}
+.submit-btn-container > button{
+    width: 80%;
 }

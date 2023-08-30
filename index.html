@@ -3,19 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Offline Bootstrap</title>
+    <title>iMeets</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <!-- Bootstrap cdn links -->
     <link
       rel="stylesheet"
       href="./bootstrap-5.3.1-dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="styles/style.css" />
     <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
+    <!-- header section -->
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark logo-nav-bar">
         <nav class="top-navbar">
+          <!-- logo genereated using www.logomaker.com -->
           <a href="./index.html"><img id="logo" alt="" src="assets/images/logo.png" /></a>
           <button
             class="navbar-toggler"
@@ -67,18 +73,29 @@
         </ul>
       </nav>
     </header>
-
-    <main class="container">
+     <!-- main content -->
+    <main class="container content-container">
       <div class="jumbotron">
-        <h1>Event Application</h1>
-        <p class="lead">This is an application in progress...</p>
+        <h1>Welcome to I-Meet Application</h1>
+        <p class="lead">
+          Introducing the IMeets app – your gateway to global meetups. Discover a myriad of events worldwide, accessing vital information about organizers, venues, and timings. Whether it's career-focused gatherings or enriching arts and cultural events, explore an array of topics effortlessly. Join the excitement on IMeets and never miss out on meaningful connections and experiences.
+        </p>
+        <ul class="lead">
+          <li>Create or join groups based on your interests</li>
+           <li> Browse upcoming events and meetups</li>
+           <li>Message other users and plan events</li>
+            <li>Share files and collaborate on projects</li>
+            <li> Stay up-to-date on the latest events and meetups</li>
+        </ul>
       </div>
     </main>
-    <footer class="navbar navbar-expand-md navbar-dark fixed-bottom bg-dark">
-      <ul class="navbar-nav me-auto me-sm-2">
-        <li id="text6">&copy; UNCC Cybercorps SFS &nbsp;</li>
-        <li><a href="#" id="text4">ABOUT &nbsp;</a></li>
-        <li><a href="#" id="text5">CONTACT &nbsp;</a></li>
+    <!-- footer section -->
+    <footer class="navbar navbar-expand-md navbar-dark fixed-bottom bg-dark footer-container">
+     
+        <p id="text6"> Copyright &copy; 2023 iMeets.com. All rights reserved | Privacy Policy &nbsp;</p>
+        <ul class="navbar-nav me-auto me-sm-2">
+        <li ><a href="#" id="text4">ABOUT &nbsp;</a></li>
+        <li ><a href="#" id="text5">CONTACT &nbsp;</a></li>
       </ul>
     </footer>
   </body>
