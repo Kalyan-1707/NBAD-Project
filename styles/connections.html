@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>iMeets</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <!-- Bootstrap cdn links -->
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.3.1-dist/css/bootstrap.min.css"
+    />
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="styles/connectionsStyle.css" />
+  </head>
+
+  <body>
+    <!-- header section -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark logo-nav-bar">
+        <nav class="top-navbar">
+          <!-- logo genereated using www.logomaker.com -->
+          <a href="./index.html"><img id="logo" alt="" src="assets/images/logo.png" /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+        <br />
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarCollapse"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a href="./NewConnection.html" id="text1"
+                >Start a new Connection &nbsp;</a
+              >
+              <button
+                class="btn btn-outline-success mx-lg-2 mx-0 my-lg-0 my-lg-2 me-auto ms-auto"
+                type="submit"
+                id="but2"
+              >
+                Login
+              </button>
+              <button
+                class="btn btn-outline-success mx-lg-2 mx-0 my-lg-0 my-lg-2 me-auto ms-auto"
+                type="submit"
+                id="but1"
+              >
+                Sign Up
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav
+        class="navbar navbar-expand-md navbar-dark bg-success"
+        id="second-nav"
+      >
+        <ul class="navbar-nav mr-auto">
+          <li><a href="index.html" id="text2">Home &nbsp;</a></li>
+          <li><a href="connections.html" id="text3">Connections</a></li>
+        </ul>
+      </nav>
+    </header>
+     <!-- main content -->
+    <main class="container content-container">
+      <div class="jumbotron">
+        <h1>Categories in I-Meet</h1>
+        
+		<h2>Technology</h2>
+     
+        <ul class="lead">
+          <li><a href="connection1.html">Bringing blockchain to tech ethusiasts</a></li>
+           <li><a href="connection2.html">Tech Career meetup for Networking</a></li>
+           <li><a href="connection3.html">How to crack tech interviews with ease?</a></li>
+        </ul>
+      </div>
+    </main>
+    <!-- footer section -->
+    <footer class="navbar navbar-expand-md navbar-dark fixed-bottom bg-dark footer-container">
+     
+        <p id="text6"> Copyright &copy; 2023 iMeets.com. All rights reserved | Privacy Policy &nbsp;</p>
+        <ul class="navbar-nav me-auto me-sm-2">
+        <li ><a href="#" id="text4">ABOUT &nbsp;</a></li>
+        <li ><a href="#" id="text5">CONTACT &nbsp;</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
