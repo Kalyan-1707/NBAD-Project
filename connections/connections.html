@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>iMeets</title>
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png" />
     <!-- Bootstrap cdn links -->
     <link
       rel="stylesheet"
-      href="./bootstrap-5.3.1-dist/css/bootstrap.min.css"
+      href="../bootstrap-5.3.1-dist/css/bootstrap.min.css"
     />
-    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
     <!-- stylesheet -->
-    <link rel="stylesheet" href="styles/connectionsStyle.css" />
+    <link rel="stylesheet" href="./connectionsStyle.css" />
+    <!-- scripts -->
+    <script src="./script.js" defer></script>
   </head>
 
   <body>
@@ -22,7 +24,9 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-dark logo-nav-bar">
         <nav class="top-navbar">
           <!-- logo genereated using www.logomaker.com -->
-          <a href="./index.html"><img id="logo" alt="" src="assets/images/logo.png" /></a>
+          <a href="../index.html"
+            ><img id="logo" alt="" src="../assets/images/logo.png"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -42,7 +46,7 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a href="./NewConnection.html" id="text1"
+              <a href="../NewConnection.html" id="text1"
                 >Start a new Connection &nbsp;</a
               >
               <button
@@ -68,32 +72,27 @@
         id="second-nav"
       >
         <ul class="navbar-nav mr-auto">
-          <li><a href="index.html" id="text2">Home &nbsp;</a></li>
-          <li><a href="connections.html" id="text3">Connections</a></li>
+          <li><a href="../index.html" id="text2">Home &nbsp;</a></li>
+          <li><a href="./connections.html" id="text3">Connections</a></li>
         </ul>
       </nav>
     </header>
-     <!-- main content -->
+    <!-- main content -->
     <main class="container content-container">
-      <div class="jumbotron">
-        <h1>Categories in I-Meet</h1>
-        
-		<h2>Technology</h2>
-     
-        <ul class="lead">
-          <li><a href="connection1.html">Bringing blockchain to tech ethusiasts</a></li>
-           <li><a href="connection2.html">Tech Career meetup for Networking</a></li>
-           <li><a href="connection3.html">How to crack tech interviews with ease?</a></li>
-        </ul>
+      <div class="jumbotron" id="listOfCategoriesContainer">
       </div>
     </main>
     <!-- footer section -->
-    <footer class="navbar navbar-expand-md navbar-dark fixed-bottom bg-dark footer-container">
-     
-        <p id="text6"> Copyright &copy; 2023 iMeets.com. All rights reserved | Privacy Policy &nbsp;</p>
-        <ul class="navbar-nav me-auto me-sm-2">
-        <li ><a href="#" id="text4">ABOUT &nbsp;</a></li>
-        <li ><a href="#" id="text5">CONTACT &nbsp;</a></li>
+    <footer
+      class="navbar navbar-expand-md navbar-dark fixed-bottom bg-dark footer-container"
+    >
+      <p id="text6">
+        Copyright &copy; 2023 iMeets.com. All rights reserved | Privacy Policy
+        &nbsp;
+      </p>
+      <ul class="navbar-nav me-auto me-sm-2">
+        <li><a href="#" id="text4">ABOUT &nbsp;</a></li>
+        <li><a href="#" id="text5">CONTACT &nbsp;</a></li>
       </ul>
     </footer>
   </body>
