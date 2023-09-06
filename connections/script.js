@@ -26,7 +26,7 @@ const getListOfCategories = async () => {
        if(events.category === category){
         const categoryElement = document.createElement("li");
         categoryElement.innerHTML = `
-            <a href="../event/event.html?id=${events?.id}">${events?.title}</a>
+            <a href="../connection/connection.html?id=${events?.id}">${events?.title}</a>
             `;
         listOfCategoriesElement.appendChild(categoryElement);
        }
