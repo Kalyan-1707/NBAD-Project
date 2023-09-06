@@ -1,7 +1,8 @@
 @charset "UTF-8";
 #logo {
-  width: 200px;
-  height: 80px;
+  width: 150px;
+  height: 40px;
+  object-fit: cover;
 }
 .logo-nav-bar {
   padding: 20px 40px;
