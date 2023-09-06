@@ -54,3 +54,6 @@
 * Yoga - https://static.toiimg.com/thumb/92353710.cms?width=680&height=512&imgsize=14294
 * Buddhism - https://cdn.thecollector.com/wp-content/uploads/2022/08/Buddhism-religion-philosophy.jpg?
 * speak with confidence - https://www.maroonoak.com/wp-content/uploads/2016/05/Public-speaking-with-confidence.jpg 
+* How to crack tech interviews with ease? - https://blog.codingblocks.com/content/images/size/w2000/2019/05/1_TPLG-Et63ALYKQ55u8CZYQ.jpeg
+* Tech Career meetup for Networking - https://www.profocustechnology.com/wp-content/uploads/2017/02/tech-meetup.jpg
+* Bringing blockchain to tech ethusiasts - https://i.ytimg.com/vi/teol3sxMKLo/maxresdefault.jpg
