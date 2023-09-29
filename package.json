@@ -1,0 +1,24 @@
+{
+  "name": "imeets",
+  "version": "1.0.0",
+  "description": "* All .html files are placed in the root folder. * css files are placed in the respective folders. * js files are placed under the scripts folder. * use bootstrap cdn v5. * when adding new page create respective folder and it should have two stylesheets one contains styles of header and footer other is specific styles sheet of that page keep both styles separated.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kalyan-1707/NBAD-Project.git"
+  },
+  "author": "Pavan Kalyan Konudula | Eshani Ghosh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kalyan-1707/NBAD-Project/issues"
+  },
+  "homepage": "https://github.com/Kalyan-1707/NBAD-Project#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,5 +1,5 @@
-[
-    {
+{
+   "Technology": [{
         "id": "58412808-4ef4-4833-81b4-df7d59ec8421",
         "title": "Bringing blockchain to tech ethusiasts",
         "category": "Technology",
@@ -31,8 +31,8 @@
         "time":"Thursday, September 27, 2023 at 7:00 PM to Thursday, September 27, 2023 at 9:00 PM EDT",
         "descTitle":"Agenda",
         "description":"<b>Expert Panel Discussion:</b> Hear from seasoned professionals and recruiters who will share their experiences and insider tips on what tech companies are looking for in candidates.<br> <b>Mock Interviews: </b> Get a firsthand experience of a technical interview with our mock interview sessions. Receive feedback and guidance on how to improve your performance.<br><b>Networking Opportunities:</b> Connect with like-minded individuals, potential employers, and industry experts to expand your professional network.<br> <b>Q&A Session:</b> Bring your questions and concerns to our interactive Q&A session with our panelists and speakers.<br>"
-    },
-    {
+    }],
+    "Health & Wellness":[{
         "id":"a3a88a83-79be-48f9-9285-f9eef3675c48",
         "title":"Speak With Confidence! - How to speak ",
         "category":"Health & Wellness",
@@ -64,5 +64,5 @@
         "time":"Monday, September 11, 2023 at 7:00 PM to Monday, September 11, 2023 at 8:00 PM EDT",
         "descTitle":"Details",
         "description":"Curious about Buddhism? This in-person weekly class presents basicteachings that you can immediately use to improve your work andrelationships, cultivate inner peace and increase your enjoyment of daily life.<br/><br/>Each hour-long class includes a talk, two short meditations and time for discussion.<br/><br/>Please arrive early to meet others and stay afterward for snacks and discussion!<br/><br/>Everyone is welcome!"
-    }
-]
+    }]
+}
