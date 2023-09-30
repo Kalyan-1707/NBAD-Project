@@ -1,13 +1,13 @@
 
 const express = require('express');
-
+const fs = require('fs');
 const router = express.Router();
 
 //app.set('view engine', 'ejs');
 router.get('/:id', (req, res) => {
     const id = req.params.id;
 
-    fs.readFile("./events.json", "utf8", (err, data) => {
+    fs.readFile("../NBAD-Project/events.json", "utf8", (err, data) => {
         if(err){
             console.log(err);
             res.statusCode(500);
@@ -32,3 +32,4 @@ router.get('/:id', (req, res) => {
         }
     })
 })
+module.exports=router;

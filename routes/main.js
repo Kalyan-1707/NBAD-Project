@@ -1,20 +1,18 @@
 const express = require('express');
-
+const fs = require('fs');
 const router = express.Router();
-
+const app = express();
 //app.set('view engine', 'ejs');
-//GET /stories:
+app.use(express.static('../NBAD-Project/public'));
+//GET 
 
-router.get('/main', (req, res) => {
-    res.render('index')
-});
 
 router.get('/newConnection', (req, res) => {
     res.render('newConnection')
 });
 
 router.get('/connections', (req, res) => {
-    fs.readFile("./events.json", "utf8", (err, data) => {
+    fs.readFile("../NBAD-Project/events.json", "utf8", (err, data) => {
         if(err){
             console.log(err);
             res.statusCode(500);
@@ -25,3 +23,5 @@ router.get('/connections', (req, res) => {
         }
     })
 })
+
+module.exports=router;

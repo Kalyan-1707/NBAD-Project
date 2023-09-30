@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     res.render('index')
 });
 
-//app.use('/',mainRoute);
+app.use('/main',mainRoute);
 app.use('/connection',connectionRoute);
 
 // app.get('/newConnection', (req, res) => {
