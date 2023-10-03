@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
-
+const methodOverride= require('method-override');
+const morgan = require('morgan');
 const app = express();
 
 const mainRoute= require('./routes/main');
@@ -11,6 +12,9 @@ app.set('view engine', 'ejs');
 
 // enabling styles/images to be served from public
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
+app.use(express.urlencoded({extended:true}));
+app.use(morgan('tiny'));
 
 app.get('/', (req, res) => {
     res.render('index')
@@ -18,6 +22,7 @@ app.get('/', (req, res) => {
 
 app.use('/main',mainRoute);
 app.use('/connection',connectionRoute);
+
 
 // app.get('/newConnection', (req, res) => {
 //     res.render('newConnection')
