@@ -6,7 +6,7 @@ const router = express.Router();
 //app.set('view engine', 'ejs');
 
 router.get('/newConnection', (req, res) => {
-    res.render('newConnection')
+    res.render('./show/newConnection')
 });
 
 router.get('/connections', (req, res) => {
