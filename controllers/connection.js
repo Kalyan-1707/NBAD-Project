@@ -43,7 +43,6 @@ exports.edit=(req,res)=>{
 exports.update=(req, res, next)=>{
     //res.send("hello...");
     let connection= req.body;
-    console.log("connection");
     let id= req.params.id;
     if(model.updateById(id,connection)){
         res.redirect('/connection/'+id);
