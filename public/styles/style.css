@@ -63,3 +63,6 @@ a {
 .nav-bar-container {
   position: sticky;
 }
+#foot{
+  position:fixed;
+}
