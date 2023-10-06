@@ -113,19 +113,29 @@ exports.updateById = function (id, connection) {
 };
 
 exports.deleteById = function (id) {
-  for (let i = 0; i < connections.length; i++) {
-    let eventIndex;
-    if (connections[i].id === id) {
-      eventIndex = i;
-    }
+  // for (let i = 0; i < connections.length; i++) {
+  //   let eventIndex;
+  //   if (connections[i].id === id) {
+  //     eventIndex = i;
+  //   }
 
-    if (eventIndex !== -1) {
-      connections.splice(eventIndex, 1);
-      return true;
-    }
+  //   if (eventIndex !== -1) {
+  //     connections.splice(eventIndex, 1);
+  //     return true;
+  //   }
+  // }
+
+  // return false;
+
+  const index = connections.findIndex((connection) => connection.id === id);
+
+  if (index !== -1) {
+    
+    connections.splice(index, 1);
+    return true; 
+  } else {
+    return false; 
   }
-
-  return false;
 };
 
 exports.save = function (connection) {
