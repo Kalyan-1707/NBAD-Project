@@ -10,7 +10,12 @@ exports.connection= (req, res) => {
 
 
     let connections= model.find();
-    res.render('./show/connections',{connections});
+    const categories = new Set();
+    for (let i = 0; i < connections.length; i++) {
+        categories.add(connections[i].category);
+    }
+
+    res.render('./show/connections',{connections,categories});
     
 };
 exports.show=(req, res, next) => {
@@ -55,9 +60,10 @@ exports.update=(req, res, next)=>{
     }
 };
 exports.create=(req, res)=>{
+    debugger
     let connection=req.body;
-    model.save(connection);
-    res.redirect('/connection/'+connection.id);
+    const id = model.save(connection);
+    res.redirect('/connection/'+id);
 };
 exports.remove=(req,res)=>{
     let id=req.params.id;

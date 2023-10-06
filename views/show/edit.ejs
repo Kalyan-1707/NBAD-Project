@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="../styles/style.css" />
     <!-- stylesheet -->
     <link rel="stylesheet" href="../styles/connectionStyle.css" />
+    <link rel="stylesheet" href="../styles/newConnectionStyles.css" />
+
    
   </head>
 
@@ -31,7 +33,7 @@
     <%- include("../partials/nav.ejs") %>
     <!-- main content -->
     <main class="container content-container">
-      <div class="jumbotron">
+      <div class="jumbotron new-connection-container">
         <h2>
           <img id="eventPic" alt="" src="<%= connection.pic %>" /> &nbsp; <span id="eventTitle"><%= connection.title %></span>
           
@@ -40,12 +42,12 @@
         <br />
         <form method="POST" action="/connection/<%=connection.id%>?_method=PUT">
           <div class="mb-3 form-group">
-            <label for="topic" class="form-label">Topic</label>
+            <label for="category" class="form-label">Category</label>
             <input
               type="text"
               class="form-control"
-              id="topic"
-              placeholder="Enter the topic of your connection"
+              id="category"
+              placeholder="Enter the category of your connection"
               value="<%= connection.category%>"
               name="category"
             />
@@ -79,9 +81,7 @@
                 id="details"
                 placeholder="Enter the details of your connection"
                 name="description"
-              >
-                <%= connection.description%>
-            </textarea>
+              ><%= connection.description%></textarea>
             </div>
             <div class="mb-3 form-group">
               <label for="location" class="form-label">Where</label>
@@ -138,7 +138,7 @@
             </div>
   
             <div class="d-grid gap-2 submit-btn-container">
-              <button type="submit" class="btn btn-primary">Create connection</button>
+              <button type="submit" class="btn btn-primary">Update connection</button>
             </div>
          
         </form>
