@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="../styles/style.css" />
     <!-- stylesheet -->
     <link rel="stylesheet" href="../styles/connectionStyle.css" />
+    <link rel="stylesheet" href="../styles/newConnectionStyles.css" />
+
    
   </head>
 
@@ -31,7 +33,7 @@
     <%- include("../partials/nav.ejs") %>
     <!-- main content -->
     <main class="container content-container">
-      <div class="jumbotron">
+      <div class="jumbotron new-connection-container">
         <h2>
           <img id="eventPic" alt="" src="<%= connection.pic %>" /> &nbsp; <span id="eventTitle"><%= connection.title %></span>
           
@@ -39,33 +41,106 @@
         <br />
         <br />
         <form method="POST" action="/connection/<%=connection.id%>?_method=PUT">
-            <table>
-                <tr>
-                    <td><label for="title" >Title</label></td>
-                    <td><input type="text" id="title" name="title" value = "<%= connection.title%>" class = "fixed-width"></td>
-                </tr>
-                <tr><td class = "align-top"><label for="category">Category</label></td>
-                    <td><textarea rows="5" id="category" name="category" class = "fixed-width"><%= connection.category%></textarea></td>
-                </tr>
-                <tr><td class = "align-top"><label for="host">Host</label></td>
-                    <td><textarea rows="5" id="host" name="host" class = "fixed-width"><%= connection.host%></textarea></td>
-                </tr>
-                <tr><td class = "align-top"><label for="location">Location</label></td>
-                    <td><textarea rows="5" id="location" name="location" class = "fixed-width"><%= connection.location%></textarea></td>
-                </tr>
-                <tr><td class = "align-top"><label for="time">Time</label></td>
-                    <td><textarea rows="5" id="time" name="time" class = "fixed-width"><%= connection.time%></textarea></td>
-                </tr>
-                <tr><td class = "align-top"><label for="descTitle">Description</label></td>
-                    <td><textarea rows="5" id="descTitle" name="descTitle" class = "fixed-width"><%= connection.descTitle%></textarea></td>
-                </tr>
-                <tr><td class = "align-top"><label for="description">Details</label></td>
-                    <td><textarea rows="10" id="description" name="description" class = "fixed-width"><%= connection.description%></textarea></td>
-                </tr>
-                <tr>
-                    <td colspan="2" class = "align-right"><button>Submit</button></td>
-                </tr>
-                </table>        
+          <div class="mb-3 form-group">
+            <label for="category" class="form-label">Category</label>
+            <input
+              type="text"
+              class="form-control"
+              id="category"
+              placeholder="Enter the category of your connection"
+              value="<%= connection.category%>"
+              name="category"
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="title" class="form-label">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              placeholder="Enter the title of your connection"
+              value="<%= connection.title%>"
+              name="title"
+            />
+          </div>
+          <div class="mb-3 form-group">
+              <label for="host" class="form-label">Host</label>
+              <input
+                type="text"
+                class="form-control"
+                id="host"
+                placeholder="Enter the host of your connection"
+                value="<%= connection.host%>"
+                name="host"
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="details" class="form-label">Details</label>
+              <textarea              
+                class="form-control"
+                id="details"
+                placeholder="Enter the details of your connection"
+                name="description"
+              ><%= connection.description%></textarea>
+            </div>
+            <div class="mb-3 form-group">
+              <label for="location" class="form-label">Where</label>
+              <input
+                type="text"
+                class="form-control"
+                id="location"
+                placeholder="Enter the location of your connection"
+                value="<%= connection.location%>"
+                name="location"
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="date" class="form-label">When</label>
+              <input
+                type="date"
+                class="form-control"
+                id="date"
+                value="<%= connection.date%>"
+                name="date"
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="start-time" class="form-label">Start</label>
+              <input
+                type="time"
+                class="form-control"
+                id="start-time"
+                value="<%= connection.start%>"
+                name="start"
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="end-time" class="form-label">End</label>
+              <input
+                type="time"
+                class="form-control"
+                id="end-time"
+                value="<%= connection.end%>"
+                name="end"
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="file" class="form-label">File</label>
+              <input
+                type="text"
+                class="form-control"
+                id="file"
+                accept="image/*"
+                placeholder="Enter the image url"
+                value="<%= connection.pic%>"
+                name="pic"
+              />
+            </div>
+  
+            <div class="d-grid gap-2 submit-btn-container">
+              <button type="submit" class="btn btn-primary">Update connection</button>
+            </div>
+         
         </form>
       </div>
     </main>

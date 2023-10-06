@@ -10,7 +10,12 @@ exports.connection= (req, res) => {
 
 
     let connections= model.find();
-    res.render('./show/connections',{connections});
+    const categories = new Set();
+    for (let i = 0; i < connections.length; i++) {
+        categories.add(connections[i].category);
+    }
+
+    res.render('./show/connections',{connections,categories});
     
 };
 exports.show=(req, res, next) => {
@@ -43,7 +48,6 @@ exports.edit=(req,res)=>{
 exports.update=(req, res, next)=>{
     //res.send("hello...");
     let connection= req.body;
-    console.log("connection");
     let id= req.params.id;
     if(model.updateById(id,connection)){
         res.redirect('/connection/'+id);
@@ -56,14 +60,15 @@ exports.update=(req, res, next)=>{
     }
 };
 exports.create=(req, res)=>{
+    debugger
     let connection=req.body;
-    model.save(connection);
-    res.redirect('/connection/'+connection.id);
+    const id = model.save(connection);
+    res.redirect('/connection/'+id);
 };
 exports.remove=(req,res)=>{
     let id=req.params.id;
     if(model.deleteById(id)){
-        //console.log(model.deleteById(id));
+        console.log(model.deleteById(id));
         res.redirect('/connection/connections');
     }
     else{

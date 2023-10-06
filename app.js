@@ -23,8 +23,19 @@ app.get('/', (req, res) => {
 app.use('/main',mainRoute);
 app.use('/connection',connectionRoute);
 
-
-
+app.use((req, res, next)=>{
+    let err = new Error('The server cannot locate '+req.url);
+    err.status=404;
+    next(err);
+});
+app.use((err,req,res,next)=>{
+    if(!err.status){
+        err.status=500;
+        err.message= ("Internal Server Error");
+    }
+    res.status(err.status);
+    res.render('error',{error: err});
+});
 app.listen(8084,() => {
     console.log('Listening on port 8084');
 

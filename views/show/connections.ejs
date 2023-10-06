@@ -31,15 +31,20 @@
     <!-- main content -->
     <main class="container content-container">
       <div class="jumbotron" id="listOfCategoriesContainer">
-        <% for (const categoryObj of connections) { %>
-          <h2><%= categoryObj.Category %></h2>
+        <% if(connections.length) { %>
+        <h1>Categories in I-meet</h1>
+        <% for (const categoryObj of categories) { %>
+          <h2><%= categoryObj %></h2>
           <ul>
-              <% for (const eventKey in categoryObj.data) { %>
-                  <% const event = categoryObj.data[eventKey]; %>
-                  <li><a href="/connection/<%= event.id %>"><%= event.title %></a></li>
-              <% } %>
+              <% for (const connection of connections) { %>
+                  <% if(connection.category === categoryObj) { %>
+                  <li><a href="/connection/<%= connection.id %>"><%= connection.title %></a></li>
+              <% } } %>
           </ul>
       <% } %>
+        <%  } else { %>
+        <h4>There are no categories in I-meet. Add new connection from <a href="/connection/newConnection">here</a></h4>
+        <% } %>
       </div>
     </main>
     <!-- footer section -->

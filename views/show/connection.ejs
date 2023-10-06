@@ -61,11 +61,11 @@
             <td>
               <b>Time:</b>
             </td>
-            <td id="time"><%= connection.time %></td>
+            <td id="time"><%= (new Date(connection.date)).toLocaleDateString('en-US',{ weekday: 'long', day: 'numeric', month: 'long', timeZone: 'UTC'  }) %> | From <%= connection.start %> - <%= connection.end %></td>
           </tr>
           <tr>
             <td>
-              <b><u id="descTitle"><%= connection.descTitle %></u></b>
+              <b><u id="descTitle">Description</u></b>
             </td>
           </tr>
           <tr>
