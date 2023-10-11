@@ -50,7 +50,7 @@ exports.update=(req, res, next)=>{
     let connection= req.body;
     let id= req.params.id;
     if(model.updateById(id,connection)){
-        res.redirect('/connection/'+id);
+        res.redirect('/connections/'+id);
     }
     else{
         let err= new Error('Cannot find connection with id '+id);
@@ -63,13 +63,13 @@ exports.create=(req, res)=>{
     let connection=req.body;
     console.log(connection);
     model.save(connection);
-    res.redirect('/connection/'+connection.id);
+    res.redirect('/connections/'+connection.id);
 };
 exports.remove=(req,res,next)=>{
     let id=req.params.id;
     if(model.deleteById(id)){
         // console.log(model.deleteById(id));
-        res.redirect('/connection/connections');
+        res.redirect('/connections/connections');
     }
     else{
         let err= new Error('Cannot find connection with id '+id);

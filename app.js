@@ -19,7 +19,7 @@ app.use(morgan('tiny'));
 
 // router modules
 app.use('/',mainRoute);
-app.use('/connection',connectionRoute);
+app.use('/connections',connectionRoute);
 
 // error handling
 app.use((req, res, next)=>{

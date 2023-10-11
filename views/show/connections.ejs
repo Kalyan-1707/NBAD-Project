@@ -38,12 +38,12 @@
           <ul>
               <% for (const connection of connections) { %>
                   <% if(connection.category === categoryObj) { %>
-                  <li><a href="/connection/<%= connection.id %>"><%= connection.title %></a></li>
+                  <li><a href="/connections/<%= connection.id %>"><%= connection.title %></a></li>
               <% } } %>
           </ul>
       <% } %>
         <%  } else { %>
-        <h4>There are no categories in I-meet. Add new connection from <a href="/connection/newConnection">here</a></h4>
+        <h4>There are no categories in I-meet. Add new connection from <a href="/connections/newConnection">here</a></h4>
         <% } %>
       </div>
     </main>
