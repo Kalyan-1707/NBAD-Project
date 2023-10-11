@@ -60,7 +60,6 @@ exports.update=(req, res, next)=>{
     }
 };
 exports.create=(req, res)=>{
-    debugger
     let connection=req.body;
     const id = model.save(connection);
     res.redirect('/connection/'+id);
@@ -68,7 +67,7 @@ exports.create=(req, res)=>{
 exports.remove=(req,res)=>{
     let id=req.params.id;
     if(model.deleteById(id)){
-        console.log(model.deleteById(id));
+        // console.log(model.deleteById(id));
         res.redirect('/connection/connections');
     }
     else{

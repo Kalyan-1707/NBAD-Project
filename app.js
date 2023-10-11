@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(morgan('tiny'));
 
 
-
+// router modules
 app.use('/',mainRoute);
 app.use('/connection',connectionRoute);
 
@@ -35,6 +35,8 @@ app.use((err,req,res,next)=>{
     res.status(err.status);
     res.render('error',{error: err});
 });
+
+// listening
 app.listen(8084,() => {
     console.log('Listening on port 8084');
 
