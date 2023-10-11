@@ -61,8 +61,9 @@ exports.update=(req, res, next)=>{
 };
 exports.create=(req, res)=>{
     let connection=req.body;
-    const id = model.save(connection);
-    res.redirect('/connection/'+id);
+    console.log(connection);
+    model.save(connection);
+    res.redirect('/connection/'+connection.id);
 };
 exports.remove=(req,res,next)=>{
     let id=req.params.id;
