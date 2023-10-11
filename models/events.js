@@ -38,7 +38,7 @@ const connections = [
     start: "19:00",
     end: "21:00",
     description:
-      "Expert Panel Discussion: Hear from seasoned professionals and recruiters who ",
+      "Expert Panel Discussion: Hear from seasoned professionals and recruiters who This expert panel discussion is a unique opportunity to gain insights and wisdom from those who have achieved remarkable success in their careers. Whether you're a recent graduate, a mid-career professional, or someone contemplating a career change, you'll find this event to be an invaluable resource for your professional development. Join us for a lively and engaging discussion that could shape your career's trajectory and empower you to make informed decisions in the ever-evolving job market.",
   },
   {
     id: "a3a88a83-79be-48f9-9285-f9eef3675c48",
@@ -82,7 +82,6 @@ const connections = [
 ];
 
 exports.find = () => connections;
-//exports.findById = id => connections.find(story=>story.id===id);
 
 exports.findById = function (id) {
   for (const event of connections) {
@@ -95,7 +94,7 @@ exports.findById = function (id) {
 exports.updateById = function (id, connection) {
   for (const event of connections) {
     if (event.id === id) {
-      console.log(event);
+      // console.log(event);
       event.title = connection.title;
       event.category = connection.category;
       event.host = connection.host;
@@ -113,19 +112,6 @@ exports.updateById = function (id, connection) {
 };
 
 exports.deleteById = function (id) {
-  // for (let i = 0; i < connections.length; i++) {
-  //   let eventIndex;
-  //   if (connections[i].id === id) {
-  //     eventIndex = i;
-  //   }
-
-  //   if (eventIndex !== -1) {
-  //     connections.splice(eventIndex, 1);
-  //     return true;
-  //   }
-  // }
-
-  // return false;
 
   const index = connections.findIndex((connection) => connection.id === id);
 

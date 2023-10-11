@@ -16,13 +16,12 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:true}));
 app.use(morgan('tiny'));
 
-app.get('/', (req, res) => {
-    res.render('index')
-});
 
-app.use('/main',mainRoute);
+// router modules
+app.use('/',mainRoute);
 app.use('/connection',connectionRoute);
 
+// error handling
 app.use((req, res, next)=>{
     let err = new Error('The server cannot locate '+req.url);
     err.status=404;
@@ -36,6 +35,8 @@ app.use((err,req,res,next)=>{
     res.status(err.status);
     res.render('error',{error: err});
 });
+
+// listening
 app.listen(8084,() => {
     console.log('Listening on port 8084');
 
