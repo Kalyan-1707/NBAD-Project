@@ -32,14 +32,14 @@ exports.show=(req, res, next) => {
     }
   
 };
-exports.edit=(req,res)=>{
+exports.edit=(req,res,next)=>{
     let id= req.params.id;
     let connection= model.findById(id);
     if(connection){
     res.render('./show/edit',{connection});
     }
     else{
-        let err= new Error('Cannot find story with id '+id);
+        let err= new Error('Cannot find connection with id '+id);
         err.status=404;
         next(err);
         //res.status(404).send('Cannot find story with id '+id);
@@ -53,7 +53,7 @@ exports.update=(req, res, next)=>{
         res.redirect('/connection/'+id);
     }
     else{
-        let err= new Error('Cannot find story with id '+id);
+        let err= new Error('Cannot find connection with id '+id);
         err.status=404;
         next(err);
         //res.status(404).send('Cannot find story with id '+id);
@@ -64,14 +64,14 @@ exports.create=(req, res)=>{
     const id = model.save(connection);
     res.redirect('/connection/'+id);
 };
-exports.remove=(req,res)=>{
+exports.remove=(req,res,next)=>{
     let id=req.params.id;
     if(model.deleteById(id)){
         // console.log(model.deleteById(id));
         res.redirect('/connection/connections');
     }
     else{
-        let err= new Error('Cannot find story with id '+id);
+        let err= new Error('Cannot find connection with id '+id);
         err.status=404;
         next(err);
         //res.status(404).send('Cannot find story with id '+id);
