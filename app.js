@@ -16,13 +16,12 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:true}));
 app.use(morgan('tiny'));
 
-app.get('/', (req, res) => {
-    res.render('index')
-});
 
-app.use('/main',mainRoute);
+
+app.use('/',mainRoute);
 app.use('/connection',connectionRoute);
 
+// error handling
 app.use((req, res, next)=>{
     let err = new Error('The server cannot locate '+req.url);
     err.status=404;

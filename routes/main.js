@@ -5,6 +5,7 @@ const router = express.Router();
 //app.set('view engine', 'ejs');
 
 //GET 
+router.get('/', mainController.index);
 router.get('/about',mainController.about);
 router.get('/contact',mainController.contact);
 
