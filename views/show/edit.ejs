@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>iMeets</title>
-    <base href="/">
+    <base href="/" />
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="../images/logo.png" />
     <!-- Bootstrap cdn links -->
@@ -24,8 +24,6 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="../styles/connectionStyle.css" />
     <link rel="stylesheet" href="../styles/newConnectionStyles.css" />
-
-   
   </head>
 
   <body>
@@ -35,12 +33,15 @@
     <main class="container content-container">
       <div class="jumbotron new-connection-container">
         <h2>
-          <img id="eventPic" alt="" src="<%= connection.pic %>" /> &nbsp; <span id="eventTitle"><%= connection.title %></span>
-          
+          <img id="eventPic" alt="" src="<%= connection.pic %>" /> &nbsp;
+          <span id="eventTitle"><%= connection.title %></span>
         </h2>
         <br />
         <br />
-        <form method="POST" action="/connections/<%=connection.id%>?_method=PUT">
+        <form
+          method="POST"
+          action="/connections/<%=connection.id%>?_method=PUT"
+        >
           <div class="mb-3 form-group">
             <label for="category" class="form-label">Category</label>
             <input
@@ -50,6 +51,7 @@
               placeholder="Enter the category of your connection"
               value="<%= connection.category%>"
               name="category"
+              required
             />
           </div>
           <div class="mb-3 form-group">
@@ -61,91 +63,105 @@
               placeholder="Enter the title of your connection"
               value="<%= connection.title%>"
               name="title"
+              required
             />
           </div>
           <div class="mb-3 form-group">
-              <label for="host" class="form-label">Host</label>
-              <input
-                type="text"
-                class="form-control"
-                id="host"
-                placeholder="Enter the host of your connection"
-                value="<%= connection.host%>"
-                name="host"
-              />
-            </div>
-            <div class="mb-3 form-group">
-              <label for="details" class="form-label">Details</label>
-              <textarea              
-                class="form-control"
-                id="details"
-                placeholder="Enter the details of your connection"
-                name="description"
-              ><%= connection.description%></textarea>
-            </div>
-            <div class="mb-3 form-group">
-              <label for="location" class="form-label">Where</label>
-              <input
-                type="text"
-                class="form-control"
-                id="location"
-                placeholder="Enter the location of your connection"
-                value="<%= connection.location%>"
-                name="location"
-              />
-            </div>
-            <div class="mb-3 form-group">
-              <label for="date" class="form-label">When</label>
-              <input
-                type="date"
-                class="form-control"
-                id="date"
-                value="<%= connection.date%>"
-                name="date"
-              />
-            </div>
-            <div class="mb-3 form-group">
-              <label for="start-time" class="form-label">Start</label>
-              <input
-                type="time"
-                class="form-control"
-                id="start-time"
-                value="<%= connection.start%>"
-                name="start"
-              />
-            </div>
-            <div class="mb-3 form-group">
-              <label for="end-time" class="form-label">End</label>
-              <input
-                type="time"
-                class="form-control"
-                id="end-time"
-                value="<%= connection.end%>"
-                name="end"
-              />
-            </div>
-            <div class="mb-3 form-group">
-              <label for="file" class="form-label">File</label>
-              <input
-                type="text"
-                class="form-control"
-                id="file"
-                accept="image/*"
-                placeholder="Enter the image url"
-                value="<%= connection.pic%>"
-                name="pic"
-              />
-            </div>
-  
-            <div class="d-grid gap-2 submit-btn-container">
-              <button type="submit" class="btn btn-primary">Update connection</button>
-            </div>
-         
+            <label for="host" class="form-label">Host</label>
+            <input
+              type="text"
+              class="form-control"
+              id="host"
+              placeholder="Enter the host of your connection"
+              value="<%= connection.host%>"
+              name="host"
+              required
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="details" class="form-label">Details</label>
+            <textarea
+              class="form-control"
+              id="details"
+              placeholder="Enter the details of your connection"
+              name="description"
+              required
+              minlength="10"
+            >
+<%= connection.description%></textarea
+            >
+          </div>
+          <div class="mb-3 form-group">
+            <label for="location" class="form-label">Where</label>
+            <input
+              type="text"
+              class="form-control"
+              id="location"
+              placeholder="Enter the location of your connection"
+              value="<%= connection.location%>"
+              name="location"
+              required
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="date" class="form-label">When</label>
+            <input
+              type="date"
+              class="form-control"
+              id="date"
+              value="<%= connection.date%>"
+              name="date"
+              required
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="start-time" class="form-label">Start</label>
+            <input
+              type="time"
+              class="form-control"
+              id="start-time"
+              value="<%= connection.start%>"
+              name="start"
+              required
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="end-time" class="form-label">End</label>
+            <input
+              type="time"
+              class="form-control"
+              id="end-time"
+              value="<%= connection.end%>"
+              name="end"
+              required
+            />
+          </div>
+          <div class="mb-3 form-group">
+            <label for="file" class="form-label">File</label>
+            <input
+              type="text"
+              class="form-control"
+              id="file"
+              accept="image/*"
+              placeholder="Enter the image url"
+              value="<%= connection.pic%>"
+              name="pic"
+              required
+              pattern="^(http:\/\/|https:\/\/).+"
+              title="Image url must start with http:// or https://"
+            />
+          </div>
+
+          <div class="d-grid gap-2 submit-btn-container">
+            <button type="submit" class="btn btn-primary">
+              Update connection
+            </button>
+          </div>
         </form>
       </div>
     </main>
-    <br>
-    <br>
+    <br />
+    <br />
     <!-- footer section -->
     <%- include("../partials/footer.ejs") %>
   </body>
