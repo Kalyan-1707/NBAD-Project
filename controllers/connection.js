@@ -1,6 +1,4 @@
 const model = require("../models/events");
-//app.use(express.static('../public'));
-//app.set('view engine', 'ejs');
 
 exports.newConnection = (req, res) => {
   res.render("./show/newConnection");
@@ -86,7 +84,10 @@ exports.update = (req, res, next) => {
   }
 
   model
-    .updateById(id, connection)
+    .findByIdAndUpdate(id, connection, {
+          runValidators: true,
+          useFindAndModify: false,
+        })
     .then((connection) => {
       if (connection) {
         return res.redirect("/connections/" + id);
@@ -105,11 +106,12 @@ exports.update = (req, res, next) => {
     });
 };
 exports.create = (req, res, next) => {
-  model
-    .save(req.body)
+
+  let newConnection = new model(req.body);
+  newConnection.save()
     .then((connection) => {
       console.log(connection);
-      return res.redirect("/connections/" + connection.id);
+      return res.redirect("/connections/connections");
     })
     .catch((err) => {
       console.log(err);
@@ -129,7 +131,7 @@ exports.remove = (req, res, next) => {
   }
 
   model
-    .deleteById(id)
+    .findByIdAndDelete(id)
     .then((connection) => {
       if (connection) {
         return res.redirect("/connections/connections");

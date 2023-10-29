@@ -43,6 +43,7 @@ app.use((req, res, next) => {
   err.status = 404;
   next(err);
 });
+
 app.use((err, req, res, next) => {
   if (!err.status) {
     err.status = 500;

@@ -44,26 +44,28 @@ const connectionSchema = new mongoose.Schema({
   },
 });
 
-const connections = mongoose.model("Connections", connectionSchema);
+// create and export model
+module.exports = mongoose.model("Connections", connectionSchema);
 
-exports.find = () => connections.find();
 
-exports.findById = function (id) {
-  return connections.findById(id);
-};
+// exports.find = () => connections.find();
 
-exports.updateById = function (id, connection) {
-  return connections.findByIdAndUpdate(id, connection, {
-    runValidators: true,
-    useFindAndModify: false,
-  });
-};
+// exports.findById = function (id) {
+//   return connections.findById(id);
+// };
 
-exports.deleteById = function (id) {
-  return connections.findByIdAndDelete(id);
-};
+// exports.updateById = function (id, connection) {
+//   return connections.findByIdAndUpdate(id, connection, {
+//     runValidators: true,
+//     useFindAndModify: false,
+//   });
+// };
 
-exports.save = function (connection) {
-  let newConnection = new connections(connection);
-  return newConnection.save();
-};
+// exports.deleteById = function (id) {
+//   return connections.findByIdAndDelete(id);
+// };
+
+// exports.save = function (connection) {
+//   let newConnection = new connections(connection);
+//   return newConnection.save();
+// };
