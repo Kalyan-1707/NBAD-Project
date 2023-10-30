@@ -45,7 +45,7 @@ const connectionSchema = new mongoose.Schema({
 });
 
 // create and export model
-module.exports = mongoose.model("Connections", connectionSchema);
+module.exports = mongoose.model("Connection", connectionSchema);
 
 
 // exports.find = () => connections.find();
